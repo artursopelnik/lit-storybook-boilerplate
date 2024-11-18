@@ -4,6 +4,8 @@
 
 Monorepo setup with *Lerna*.
 
+Note: Angular plays nice with custom elements, so you can use Lit in your Angular apps.
+
 ## 💡 Requirements
 
 - Node.js 20
@@ -15,4 +17,17 @@ Monorepo setup with *Lerna*.
 2. Install dependencies: `npm install`
 3. Navigate to the core package: `cd /packages/lit` and build it with: `npm run build`
 4. Go to the Storybook package: `cd /packages/storybook`
-    - Use `npm run storybook.run` to watch for changes in Storybook.
+    - Use `npm run storybook` to watch for changes in Storybook.
+
+## 👏 Contributing
+- :octocat: [Pull requests](https://github.com/artursopelnik/lit-storybook-boilerplate/pulls) and 🌟 stars are always welcome.
+- For major changes, please open an [issue](https://github.com/artursopelnik/lit-storybook-boilerplate/issues) first to discuss what you would like to change.
+- Please make sure to update tests as appropriate.
+
+## 📩 Contact
+📧 artur.sopelnik93@gmail.com
+
+💼 Linkedin [@artursopelnik](https://www.linkedin.com/in/artur-sopelnik-b93656110/)
+
+## License
+MIT &copy; [Artur Sopelnik](https://github.com/artursopelnik/)
