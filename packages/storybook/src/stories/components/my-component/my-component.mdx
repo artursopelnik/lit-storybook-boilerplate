@@ -1,0 +1,61 @@
+import {Controls, Markdown} from '@storybook/blocks'
+import {
+  Meta,
+  Title,
+  Canvas,
+  Source
+} from '@storybook/blocks'
+import * as MyComponentStories from './my-component.stories'
+import { hrefTo } from '@storybook/addon-links'
+
+<Meta of={MyComponentStories} />
+
+<Title />
+
+The `my-component` is used to provide a way to greet a user with their first, middle and last name.
+
+The component displays only the first and last name by default, but can optionally be extended with a middle name `middle`.
+
+## Table of Contents
+
+- [Examples](#examples)
+- [Properties](#properties)
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={MyComponentStories.Default} sourceState="none" meta={MyComponentStories} withToolbar={false} additionalActions={[
+    {
+        title: 'Show code',
+        onClick: () => document.querySelector('.source-code').classList.toggle('hidden'),
+    },
+    {
+      title: 'Show story',
+      onClick: () => hrefTo('components-mycomponent', 'default').then((href) => window.open(href))
+    }
+]} />
+
+<div className="source-code hidden">
+    #### Vanilla JS
+
+    <Source language="html" dark={true}></Source>
+
+    #### Angular
+
+    <Source language="typescript" dark={true} code={`<my-component [first]="John" [middle]="" [last]="Doe"></my-component>`}></Source>
+
+    #### React
+
+    <Source language="tsx" dark={true} code={`<MyComponent first="John" middle="" last="Doe" />`}></Source>
+
+    #### Vue
+
+    <Source language="tsx" dark={true} code={`<MyComponent :first="'John'" :middle="" :last="'Doe'" />`}></Source>
+</div>
+
+## Properties
+
+<Controls />

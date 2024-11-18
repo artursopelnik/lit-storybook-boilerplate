@@ -1,0 +1,23 @@
+{
+  "name": "@lit-storybook-boilerplate/lit-react",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "@lit-storybook-boilerplate/lit": "^0.0.1",
+    "@lit/react": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "@types/react": "^17 || ^18"
+  },
+  "devDependencies": {
+    "typescript": "~4.7.4"
+  },
+  "files": [
+    "src/components/my-component/my-component.{js,js.map,d.ts,d.ts.map}"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@lit-storybook-boilerplate/lit",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run gen",
+    "test": "jest",
+    "preview": "vite preview",
+    "update": "npx npm-check-updates -u",
+    "gen": "npm run gen:react && npm run gen:vue",
+    "gen:react": "npx lit labs gen --framework=react --package='./' --out='../'",
+    "gen:vue": "npx lit labs gen --framework=vue --package='./' --out='../'"
+  },
+  "dependencies": {
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "@lit-labs/gen-wrapper-vue": "^0.4.0",
+    "@types/jest": "^29.5.14",
+    "ts-jest": "^29.2.5",
+    "vite": "^5.4.11"
+  }
+}
