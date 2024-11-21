@@ -17,8 +17,11 @@
     "lit": "^3.2.1"
   },
   "devDependencies": {
+    "@lit-labs/cli": "^0.6.5",
+    "@lit-labs/gen-wrapper-react": "^0.3.3",
     "@lit-labs/gen-wrapper-vue": "^0.4.0",
     "@types/jest": "^29.5.14",
+    "rollup-plugin-scss-lit": "^2.0.1",
     "ts-jest": "^29.2.5",
     "vite": "^5.4.11"
   }

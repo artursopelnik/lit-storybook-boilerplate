@@ -5,12 +5,12 @@
     "packages/*"
   ],
   "dependencies": {
-    "@types/node": "^22.9.0"
+    "@types/node": "^22.9.1"
   },
   "devDependencies": {
     "lerna": "^8.1.9",
-    "typescript": "^5.6.3",
-    "npm-check-updates": "^17.1.11"
+    "npm-check-updates": "^17.1.11",
+    "typescript": "^5.6.3"
   },
   "scripts": {
     "update": "npx npm-check-updates -u",
