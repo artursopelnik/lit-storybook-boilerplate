@@ -35,13 +35,15 @@ export class MyComponent extends LitElement {
   @property({ type: String })
   last = ''
 
-  /**
-   * The number of times the button has been clicked.
-   */
   @property({ type: Number })
   count = 0
 
-  getText = () => {
+  private _handleClick() {
+    this.count++
+    this.dispatchEvent(new Event('onClick', { bubbles: false }))
+  }
+
+  private _getText = () => {
       return format(this.first, this.middle, this.last)
   }
 
@@ -51,16 +53,12 @@ export class MyComponent extends LitElement {
         'my-element': true,
         'my-element--middle': this.middle,
       })}>
-          <span>Hello World! I'm ${this.getText()}</span> <slot></slot> <br /><br />
-          <button @click=${this._onClick} part="button">
+          <span>Hello World! I'm ${this._getText()}</span> <slot></slot> <br /><br />
+          <button @click="${this._handleClick}">
               count is ${this.count}
           </button>
       </div>
     `
-  }
-
-  private _onClick() {
-    this.count++
   }
 }
 
